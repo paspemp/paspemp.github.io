@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ΠΑΣΠ ΕΜΠ - Θέσεις</title>
+    <link rel="stylesheet" href="style.css"> 
+
+    <link rel="icon" type="image/png" href="logo2.png">
+    
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo"><img src="logo.png" alt="ΠΑΣΠ ΕΜΠ Logo"></a>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="poioi_eimaste.html">Ποιοί είμαστε</a></li>
+            <li><a href="programma.html">Το Πρόγραμμά μας</a></li>
+            <li><a href="scholes.html">Σχολές</a></li>
+            <li><a href="theseis.html">Θέσεις</a></li>
+            <li><a href="epikoinonia.html">Επικοινωνία</a></li>
+            <li><a href=# class="nav-btn-special" target="_blank" rel="noopener noreferrer">Engineer Your Future</a></li>
+        </ul>
+    </nav>
+
+    <section id="announcements" class="page-header-section">
+    <h2>Θέσεις</h2>
+    <p class="subtitle" style="text-align: center; margin-bottom: 3rem;">
+        Όλες οι θέσεις και οι αποφάσεις της παράταξης.
+    </p>
+
+    <div class="announcement-grid">
+        <div class="announcement-card feature-card">
+            <div class="feature-icon">📰</div>
+            <h3>Δελτίο Τύπου ΠΑΣΠ ΕΜΠ για ΤΕΕ</h3>
+            <p class="date">📅 6 Νοεμβρίου 2025</p>
+            <p>Η ιδιωτική εκπαίδευση απειλεί την αξιοπιστία του ΤΕΕ και των Μηχανικών</p>
+            <a href="article.html?id=tee-details" class="btn btn-secondary-small">Διαβάστε Περισσότερα</a>
+        </div>
+        
+        <div class="announcement-card feature-card">
+            <div class="feature-icon">␡</div>
+            <h3>Δελτίο Τύπου ΠΑΣΠ ΕΜΠ για Διαγραφές Φοιτητών</h3>
+            <p class="date">📅 22 Οκτωβρίου 2025</p>
+            <p>Καλάθι Εξαμήνων (- Voucher) για Διαγραφές Φοιτητών</p>
+            <a href="article.html?id=diagrafes-details" class="btn btn-secondary-small">Διαβάστε Περισσότερα</a>
+        </div>
+        
+        <div class="announcement-card feature-card">
+            <div class="feature-icon">⚖️</div>
+            <h3>Δελτίο Τύπου για Νόμο περί Πειθαρχικών & Μέτρων Ασφαλείας</h3>
+            <p class="date">📅 22 Οκτωβρίου 2025</p>
+            <p>Ασφάλεια...(?) & Νέος ΠειΘαρχικός Κώδικας</p>
+            <a href="article.html?id=peitharxika-details" class="btn btn-secondary-small">Διαβάστε Περισσότερα</a>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; ΠΑΣΠ ΕΜΠ. All rights reserved.</p>
+    </footer>
+    <script>
+        // Επιλογή των στοιχείων
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links li');
+
+        // Όταν πατάς το hamburger
+        hamburger.addEventListener('click', () => {
+            // Εναλλαγή της κλάσης 'active'
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // (Προαιρετικά) Να κλείνει το μενού όταν πατάς ένα link
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

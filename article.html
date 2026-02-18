@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ΠΑΣΠ ΕΜΠ - Άρθρο</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" type="image/png" href="logo2.png">
+    
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo"><img src="logo.png" alt="ΠΑΣΠ ΕΜΠ Logo"></a>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="poioi_eimaste.html">Ποιοί είμαστε</a></li>
+            <li><a href="programma.html">Το Πρόγραμμά μας</a></li>
+            <li><a href="scholes.html">Σχολές</a></li>
+            <li><a href="theseis.html">Θέσεις</a></li>
+            <li><a href="epikoinonia.html">Επικοινωνία</a></li>
+            <li><a href=# class="nav-btn-special" target="_blank" rel="noopener noreferrer">Engineer Your Future</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-header-section">
+        <div class="announcement-post-container">
+            <a href="theseis.html" class="back-link">← Πίσω στις Θέσεις</a>
+            
+            <div id="loading">Φόρτωση...</div>
+
+            <div id="article-content" style="display: none;">
+                <div class="post-header">
+                    <h1 id="title"></h1>
+                    <p class="post-meta">📅 <span id="date"></span> | 📂 <span id="cat"></span></p>
+                </div>
+                <div class="post-content" id="body-text"></div>
+            </div>
+
+            <a href="theseis.html" class="back-link">← Επιστροφή στις Θέσεις</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; ΠΑΣΠ ΕΜΠ</p></footer>
+
+    <script src="articles.js"></script>
+
+    <script>
+        // Βρίσκουμε το ID από το URL
+        const params = new URLSearchParams(window.location.search);
+        const articleId = params.get('id');
+
+        // Ψάχνουμε το άρθρο μέσα στη λίστα 'blogPosts' που φτιάξαμε πριν
+        const article = blogPosts.find(item => item.id === articleId);
+
+        if (article) {
+            // Γεμίζουμε τη σελίδα
+            document.getElementById('title').innerText = article.title;
+            document.getElementById('date').innerText = article.date;
+            document.getElementById('cat').innerText = article.category;
+            document.getElementById('body-text').innerHTML = article.content; // Το .content τώρα δέχεται τα HTML tags σου
+
+            // Εμφανίζουμε το περιεχόμενο
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('article-content').style.display = 'block';
+            document.title = "ΠΑΣΠ ΕΜΠ - " + article.title;
+        } else {
+            document.getElementById('loading').innerText = "Το άρθρο δεν βρέθηκε.";
+        }
+
+        // Επιλογή των στοιχείων
+		const hamburger = document.querySelector('.hamburger');
+		const navLinks = document.querySelector('.nav-links');
+		const links = document.querySelectorAll('.nav-links li');
+
+		// Όταν πατάς το hamburger
+		hamburger.addEventListener('click', () => {
+		    // Εναλλαγή της κλάσης 'active'
+		    navLinks.classList.toggle('active');
+		    hamburger.classList.toggle('active');
+		});
+
+		// (Προαιρετικά) Να κλείνει το μενού όταν πατάς ένα link
+		links.forEach(link => {
+		    link.addEventListener('click', () => {
+		        navLinks.classList.remove('active');
+		        hamburger.classList.remove('active');
+		    });
+		});
+    </script>
+</body>
+</html>

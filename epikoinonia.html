@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ΠΑΣΠ ΕΜΠ - Επικοινωνία</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" type="image/png" href="logo2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo"><img src="logo.png" alt="ΠΑΣΠ ΕΜΠ Logo"></a>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="poioi_eimaste.html">Ποιοί είμαστε</a></li>
+            <li><a href="programma.html">Το Πρόγραμμά μας</a></li>
+            <li><a href="scholes.html">Σχολές</a></li>
+            <li><a href="theseis.html">Θέσεις</a></li>
+            <li><a href="epikoinonia.html">Επικοινωνία</a></li>
+           	<li><a href=# class="nav-btn-special" target="_blank" rel="noopener noreferrer">Engineer Your Future</a></li>
+        </ul>
+    </nav>
+
+    <section id="contact" class="page-header-section">
+    <h2>Επικοινωνία</h2>
+    <p class="subtitle" style="text-align: center; margin-bottom: 3rem;">
+        Επικοινωνήστε με την παράταξη για ερωτήσεις, συμμετοχή ή προτάσεις.
+    </p>
+
+    <div class="contact-layout">
+        <div class="contact-form-container">
+            <h3>Στείλτε μας Μήνυμα</h3>
+            <form action="mailto:pasp.hmmy.emp@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Ονοματεπώνυμο:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Θέμα:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Μήνυμα:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn btn-primary"><span>Αποστολή Μηνύματος</span></button>
+            </form>
+        </div>
+
+        <div class="contact-info-container">
+            <h3>Στοιχεία Επικοινωνίας</h3>
+            <div class="info-item">
+                <div class="info-icon">📧</div>
+                <div class="info-text">
+                    <h4>Email</h4>
+                    <p>pasp.hmmy.emp@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div class="info-text">
+                    <h4>ΠΑΣΠ ΕΜΠ</h4>
+                    <p>Πολυτεχνειούπολη Ζωγράφου</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <h4>Ακολουθήστε μας</h4>
+                <a href="https://www.facebook.com/pasphmmyemp" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                <a href="https://www.instagram.com/pasp.hmmy.emp/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linktr.ee/paspemp" class="social-icon" target="_blank"><i class="fas fa-link"></i></a> </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; ΠΑΣΠ ΕΜΠ. All rights reserved.</p>
+    </footer>
+
+    <script>
+    	// Επιλογή των στοιχείων
+		const hamburger = document.querySelector('.hamburger');
+		const navLinks = document.querySelector('.nav-links');
+		const links = document.querySelectorAll('.nav-links li');
+
+		// Όταν πατάς το hamburger
+		hamburger.addEventListener('click', () => {
+		    // Εναλλαγή της κλάσης 'active'
+		    navLinks.classList.toggle('active');
+		    hamburger.classList.toggle('active');
+		});
+
+		// (Προαιρετικά) Να κλείνει το μενού όταν πατάς ένα link
+		links.forEach(link => {
+		    link.addEventListener('click', () => {
+		        navLinks.classList.remove('active');
+		        hamburger.classList.remove('active');
+		    });
+		});
+    </script>
+</body>
+</html>

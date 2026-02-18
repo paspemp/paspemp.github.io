@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ΠΑΣΠ ΕΜΠ</title>
+    <link rel="stylesheet" href="style.css"> 
+
+    <link rel="icon" type="image/png" href="logo2.png">
+
+</head>
+<body>
+    <div class="preloader" id="preloader">
+        <div class="lightning-glow"></div>
+        <div class="lightning-bolt">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                <path d="M 230,30 L 140,160 L 210,160 L 130,270 L 190,270 L 70,390 L 150,210 L 90,210 L 170,90 L 120,90 Z" 
+                      fill="#f86505" 
+                      stroke="#f86505"
+                      stroke-width="2"
+                      stroke-linejoin="miter"
+                      filter="drop-shadow(0 0 10px #f86505)"/>
+            </svg>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="logo"><img src="logo.png" alt="ΠΑΣΠ ΕΜΠ Logo"></a>
+
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="poioi_eimaste.html">Ποιοί είμαστε</a></li>
+            <li><a href="programma.html">Το Πρόγραμμά μας</a></li>
+            <li><a href="scholes.html">Σχολές</a></li>
+            <li><a href="theseis.html">Θέσεις</a></li>
+            <li><a href="epikoinonia.html">Επικοινωνία</a></li>
+
+            <li><a href=# class="nav-btn-special" target="_blank" rel="noopener noreferrer">Engineer Your Future</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="gradient-orb orb1"></div>
+        <div class="gradient-orb orb2"></div>
+        <div class="gradient-orb orb3"></div>
+        
+        <div class="hero-content">
+            <h1>ΟΛΟΙ ΕΜΕΙΣ ΓΙΑ ΕΜΑΣ</h1>
+            <p class="subtitle">Διαμορφώνουμε το Πανεπιστήμιο που μας αξίζει!</p>
+            <div class="cta-buttons">
+                <a href="epikoinonia.html" class="btn btn-primary"><span>Πες μας την γνώμη σου</span></a>
+                <a href="programma.html" class="btn btn-secondary"><span>Το Όραμά μας</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="commitments" style="background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);">
+       <h2>Οι Τρεις Δεσμεύσεις μας</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🗣️</div>
+                <h3>Δυνάμουμε την Φωνή σου</h3>
+                <p>Διάμορφωνουμε έναν Σύλλογο που θα σε ακούει.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>Αφουγκραζόμαστε τα Προβλήματα</h3>
+                <p>Δίνουμε λύση στα ακαδημαϊκά ζητήματα που προκύπτουν και προτείνουμε βελτιώσεις.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Γινόμαστε η Λογίκη</h3>
+                <p>Μέσα σε έναν Σύλλογο που ο παραλογισμός επικρατεί, είμαστε η φωνή σου.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 4rem;">
+            <a href="programma.html" class="btn btn-primary" style="margin: 0 auto;"><span>Δείτε το Πρόγραμμά μας</span></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; ΠΑΣΠ ΕΜΠ. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').classList.add('hidden');
+            }, 4000);
+        });
+        // Επιλογή των στοιχείων
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links li');
+
+        // Όταν πατάς το hamburger
+        hamburger.addEventListener('click', () => {
+            // Εναλλαγή της κλάσης 'active'
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // (Προαιρετικά) Να κλείνει το μενού όταν πατάς ένα link
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

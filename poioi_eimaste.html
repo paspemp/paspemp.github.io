@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ΠΑΣΠ ΕΜΠ - Ποιοί Είμαστε</title>
+    <link rel="stylesheet" href="style.css"> 
+
+    <link rel="icon" type="image/png" href="logo2.png">
+
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo"><img src="logo.png" alt="ΠΑΣΠ ΕΜΠ Logo"></a>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="poioi_eimaste.html">Ποιοί είμαστε</a></li>
+            <li><a href="programma.html">Το Πρόγραμμά μας</a></li>
+            <li><a href="scholes.html">Σχολές</a></li>
+            <li><a href="theseis.html">Θέσεις</a></li>
+            <li><a href="epikoinonia.html">Επικοινωνία</a></li>
+           <li><a href=# class="nav-btn-special" target="_blank" rel="noopener noreferrer">Engineer Your Future</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="page-header-section">
+        <h2>Ποιοί είμαστε</h2>
+        <div class="mission-content">
+            <p>
+                Η Πανελλήνια Αγωνιστική Σπουδαστική Παράταξη αποτελεί ένα τεράστιο και αναπόσπαστο κομμάτι της Ακαδημαϊκής κοινότητας από τις απαρχές του φοιτητικού συνδικαλισμού, με την αποκατάσταση της δημοκρατίας στη χώρα. Πιστή στις ιδέες και στις αξίες που την διέπουν από τα πρώτα χρόνια της συνδικαλιστικής της δράσης, η Π.Α.Σ.Π. αποτελεί την μόνη φωνή λογικής εντός των Ιδρυμάτων.
+            </p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="mission-content">
+            <p>
+                Η συνεχής δέσμευσή μας προς τους φοιτητές και την πανεπιστημιακή κοινότητα, ενσωματώνεται στις καθημερινές μας δράσεις και πρωτοβουλίες. Μέσα από προτάσεις και έργα που στοχεύουν στην πραγματική βελτίωση του ακαδημαϊκού περιβάλλοντος, φιλοδοξούμε να γίνουμε οι φορείς αλλαγής που χρειάζεται η κοινωνία μας.
+            </p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="mission-content">
+            <p>
+                Σε μια εποχή όπου η απολιτικοποίηση και η αποξένωση κυριαρχούν, εμείς αγωνιζόμαστε για την αναγέννηση της συλλογικής δράσης και τη δημιουργία χώρων ελεύθερης έκφρασης στα πανεπιστήμια. Η ενεργός συμμετοχή των φοιτητών μας δεν είναι απλώς επιθυμητή, αλλά και απαραίτητη για τη διασφάλιση της δημοκρατίας, της ισότητας και της διαφάνειας στα ακαδημαϊκά ιδρύματα.
+            </p>
+        </div>
+    </section>
+
+    <section id="about">
+       <h2>Διακήρυξη Π.Α.Σ.Π. 2008</h2>
+        <div class="mission-content">
+            <p>
+                “Η Πανελλήνια Αγωνιστική Σπουδαστική Παράταξη διακηρύττει την οργανωτική της αυτονομία και αυτοτέλεια.” 
+            </p>
+        </div>
+    </section>
+
+    <section id="about">
+       <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🗣️</div>
+                <h3>Δυνάμουμε την Φωνή σου</h3>
+                <p>Διάμορφωνουμε έναν Σύλλογο που θα σε ακούει.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>Αφουγκραζόμαστε τα Προβλήματα</h3>
+                <p>Δίνουμε λύση στα ακαδημαϊκά ζήτηματα που προκύπτουν και προτείνουμε βελτιώσεις.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Γινόμαστε η Λογίκη</h3>
+                <p>Μέσα σε έναν Σύλλογο που ο παραλογισμός επικρατεί, είμαστε η φωνή σου.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; ΠΑΣΠ ΕΜΠ. All rights reserved.</p>
+    </footer>
+    <script>
+    	// Επιλογή των στοιχείων
+		const hamburger = document.querySelector('.hamburger');
+		const navLinks = document.querySelector('.nav-links');
+		const links = document.querySelectorAll('.nav-links li');
+
+		// Όταν πατάς το hamburger
+		hamburger.addEventListener('click', () => {
+		    // Εναλλαγή της κλάσης 'active'
+		    navLinks.classList.toggle('active');
+		    hamburger.classList.toggle('active');
+		});
+
+		// (Προαιρετικά) Να κλείνει το μενού όταν πατάς ένα link
+		links.forEach(link => {
+		    link.addEventListener('click', () => {
+		        navLinks.classList.remove('active');
+		        hamburger.classList.remove('active');
+		    });
+		});
+    </script>
+</body>
+</html>
